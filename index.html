@@ -3,16 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <title>QRCode generator</title>
   </head>
-
-  <style>
-    div {
-      margin-top: 20px;
-    }
-  </style>
-
   <body>
     <input id="text" placeholder="Enter the URL..." />
 
@@ -20,19 +14,10 @@
 
     <button onclick="generateQR()">Generate</button>
 
-    <div id="qrcode"></div>
+    <div class="qrOutput">
+      <div id="qrcode"></div>
+    </div>
 
-    <script>
-      function generateQR() {
-        const qrcode = document.getElementById("qrcode");
-        const text = document.getElementById("text");
-
-        new QRCode(qrcode, {
-          text: text.value,
-          width: 100,
-          height: 100,
-        });
-      }
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
