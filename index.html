@@ -8,14 +8,19 @@
     <title>QRCode generator</title>
   </head>
   <body>
-    <input id="text" placeholder="Enter the URL..." />
+    <div class="container">
+      <h1>QR Code Generator</h1>
+      <p>Enter the URL to generate QR code</p>
 
-    <br /><br />
+      <input type="text" id="qr-input" placeholder="https://example.com..." />
 
-    <button onclick="generateQR()">Generate</button>
+      <button id="generate-btn" onclick="generateQR()">Generate</button>
 
-    <div class="qrOutput">
-      <div id="qrcode"></div>
+      <div class="qr-box">
+        <div id="qr-code"></div>
+      </div>
+
+      <button id="download-btn">Download PNG</button>
     </div>
 
     <script src="main.js"></script>
